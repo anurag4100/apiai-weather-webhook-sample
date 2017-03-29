@@ -48,13 +48,13 @@ def processRequest(req):
         return res
     elif req.get("result").get("action") == "resolved-rule":
         print("Got that!!!!!")
-        base_url="https://api.api.ai/v1/query?hello"
-        #result = urlopen(base_url).read()
-        #print("Result is as follows:")
-        #print(result)
+        base_url='https://api.api.ai/api/query?v=20150910&query=Loans%20are%20not%20allowed%20on%20this%20contract.&lang=en&sessionId=473f0d30-c510-4d58-b97f-63c5c019ec8e&timezone=2017-03-29T19:04:08+0530' -H 'Authorization:Bearer ed2d8024928443f786b75fbbab4b6bee'
+        result = urlopen(base_url).read()
+        print("Result is as follows:")
+        print(result)
         return {
-        "speech": "result",
-        "displayText": "result",
+        "speech": result,
+        "displayText": result,
         # "data": data,
         # "contextOut": [],
         "source": "directive service"

@@ -47,7 +47,7 @@ def processRequest(req):
     data = json.loads(result)
     res = makeWebhookResult(data)
     return res
-elif req.get("result").get("action") == "yahooWeatherForecast":
+elif req.get("result").get("action") == "resolved-rule":
     print("Got that!!!!!")
 
 

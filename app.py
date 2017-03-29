@@ -7,17 +7,9 @@ install_aliases()
 from urllib.parse import urlparse, urlencode
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError
-import os.path
-import sys
 import json
 import os
-try:
-    import apiai
-except ImportError:
-    sys.path.append(
-        os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir)
-    )
-    import apiai
+
 
 from flask import Flask
 from flask import request
@@ -56,13 +48,7 @@ def processRequest(req):
         return res
     elif req.get("result").get("action") == "resolved-rule":
         print("Got that!!!!!")
-        ai = apiai.ApiAI("ed2d8024928443f786b75fbbab4b6bee")
-        request = ai.text_request()
-        request.session_id = "<SESSION ID, UNIQUE FOR EACH USER>"
-        request.query = "Hello"
-        response = request.getresponse()
-        print("Got the response...")
-        print (response.read())
+        
 
 
 

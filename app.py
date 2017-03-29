@@ -50,6 +50,8 @@ def processRequest(req):
         print("Got that!!!!!")
         base_url="https://api.api.ai/v1/query?hello"
         result = urlopen(base_url).read()
+        print("Result is as follows:")
+        print(result)
         return {
         "speech": result,
         "displayText": result,

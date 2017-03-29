@@ -88,6 +88,7 @@ def makeWebhookResult(data):
              ", the temperature is " + condition.get('temp') + " " + units.get('temperature')
 
     print("Response:")
+    print "Hello, Python!-Anurag"
     print(speech)
 
     return {

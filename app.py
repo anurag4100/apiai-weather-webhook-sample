@@ -10,6 +10,7 @@ from urllib.error import HTTPError
 
 import json
 import os
+import apiai
 
 from flask import Flask
 from flask import request
@@ -48,6 +49,13 @@ def processRequest(req):
         return res
     elif req.get("result").get("action") == "resolved-rule":
         print("Got that!!!!!")
+        ai = apiai.ApiAI("ed2d8024928443f786b75fbbab4b6bee")
+        request = ai.text_request()
+        request.session_id = "<SESSION ID, UNIQUE FOR EACH USER>"
+        request.query = "Hello"
+        response = request.getresponse()
+        print("Got the response...")
+        print (response.read())
 
 
 

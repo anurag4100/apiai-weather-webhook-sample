@@ -7,7 +7,8 @@ install_aliases()
 from urllib.parse import urlparse, urlencode
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError
-
+import os.path
+import sys
 import json
 import os
 try:

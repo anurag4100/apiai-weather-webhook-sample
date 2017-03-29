@@ -53,8 +53,8 @@ def processRequest(req):
         print("Result is as follows:")
         print(result)
         return {
-        "speech": result,
-        "displayText": result,
+        "speech": "result",
+        "displayText": "result",
         # "data": data,
         # "contextOut": [],
         "source": "directive service"

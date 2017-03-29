@@ -49,9 +49,9 @@ def processRequest(req):
     elif req.get("result").get("action") == "resolved-rule":
         print("Got that!!!!!")
         base_url="https://api.api.ai/v1/query?hello"
-        result = urlopen(base_url).read()
-        print("Result is as follows:")
-        print(result)
+        #result = urlopen(base_url).read()
+        #print("Result is as follows:")
+        #print(result)
         return {
         "speech": "result",
         "displayText": "result",

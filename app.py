@@ -49,10 +49,10 @@ def processRequest(req):
     elif req.get("result").get("action") == "resolved-rule":
         print("Got that!!!!!")
         base_url="https://api.api.ai/v1/query?hello"
-        result = urlopen(base_url).read()
+        #result = urlopen(base_url).read()
         return {
         "speech": "Anurag",
-        "displayText": result,
+        "displayText": "result",
         # "data": data,
         # "contextOut": [],
         "source": "directive service"

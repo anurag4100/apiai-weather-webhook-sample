@@ -48,6 +48,13 @@ def processRequest(req):
         return res
     elif req.get("result").get("action") == "resolved-rule":
         print("Got that!!!!!")
+        return {
+        "speech": "Anurag",
+        "displayText": "Anurag",
+        # "data": data,
+        # "contextOut": [],
+        "source": "directive service"
+    }
         
 
 
